@@ -1,8 +1,8 @@
 import { Character, FCMembers, type FCMembersParseResult, type PaginatedParseResult } from "@xivapi/nodestone";
 
 const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours
-const FREECOMPANY = import.meta.env.FREECOMPANY_ID;
-const HONOURARAY = import.meta.env.HONOURARY_IDS.split(",");
+const FREECOMPANY = process.env.FREECOMPANY_ID!;
+const HONOURARAY = process.env.HONOURARY_IDS!.split(",");
 
 interface FcMember {
 	FcRankIcon: string;
